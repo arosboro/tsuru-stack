@@ -12,7 +12,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "precise64"
   config.vm.hostname = "tsuru"
-  config.vm.provision :shell, :path => "bootstrap.sh"
+  config.vm.provision :shell, :path => "https://raw.github.com/tsuru/now/master/run.bash", :privileged => false
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
